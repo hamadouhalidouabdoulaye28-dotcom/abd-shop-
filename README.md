@@ -50,3 +50,9 @@ app.get('/', (req, res) => res.send('ABD-SHOP Airtel Money API'));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`API running on ${PORT}`));
+
+AIRTEL_API_BASE=https://sandbox.airtelmoney.com
+AIRTEL_CLIENT_ID=your_airtel_client_id
+AIRTEL_CLIENT_SECRET=your_airtel_client_secret
+AIRTEL_CALLBACK_URL=https://your-backend-url/api/payment/airtel/webhook
+PORT=3000
