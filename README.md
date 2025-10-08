@@ -37,3 +37,16 @@
     "nodemon": "^2.0.22"
   }
 }
+
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const paymentRoutes = require('./routes/payment');
+const app = express();
+
+app.use(bodyParser.json());
+app.use('/api/payment', paymentRoutes);
+app.get('/', (req, res) => res.send('ABD-SHOP Airtel Money API'));
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`API running on ${PORT}`));
